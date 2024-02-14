@@ -1,0 +1,107 @@
+Consider the following two screenshots from a flutter app. The first is from the app runniing on the iPad simulator. The second is from the web. Why do the (green) graphic images look different. 
+
+iPad
+
+web (or Mac)
+
+https://discord.com/channels/420324994703163402/421448406506930187/1189090258734809168
+
+https://stackoverflow.com/questions/77720114/why-do-images-appear-differently-depending-on-the-platform
+
+
+
+int? Function()? retrieveValue,
+void Function(int newValue)? updateValue) 
+
+
+cMinHangmanLetters, cMaxHangmanLetters, viewModel.fetchNumberOfLetters, viewModel.setNumberOfLetters
+
+
+reliability
+usability
+flexibility
+
+DragTarget<String>(
+          onAccept: (String letter) {
+            viewModel.addUnusedLetter(letter);
+          },
+          builder: (BuildContext context, List<String?> draggedLetterList, List notUsedList) {
+            String? hoveringLetter = draggedLetterList.isNotEmpty ? draggedLetterList.first : null;
+            return Container(
+              alignment: Alignment.center,
+              height: 50.0,
+              width: 200.0,
+              color: Colors.grey[200],
+              child: hoveringLetter != null  ? Text("Dropping $hoveringLetter") : const Text("Drag Unused Letters Here"),
+            );
+          },
+        ),
+
+
+first we need to have code that toggles between the three states. we need to see if i get a splash effect when tapping an empty field
+the first tap should whiten the field. the second tap should unwhiten the field if it is not occupied. if it is occupied, then it should whiten the field (remove the letter) and the second tap should deaden the field.
+
+how do we store this state in display text. 
+dead is a 0
+white (live) is an underscore, though we may or may not display this with an actual underscore
+white with a letter is the actual letter
+
+need to allow for wheel of fortune
+hyphen
+apostrophe
+question mark 
+period
+& symbol
+number sign
+
+for the compendium, it needs to be able to extract only the first line
+no, for these matches, it's not clear how the game is being played; does the user guess the 
+
+for wheel of fortune good news and bad. we know where the spaces will be since spaces aren’t part of the white letters
+so we can know when to include a space character
+but we don’t know about the non-alphabetic, non-space characters such as the hyphen, 
+
+another problem, can these non-alphabetic, non-space characters be excluded. 
+// we can simply say they can't be excluded, so they can only be added 
+can't exclude (name of character)
+can't exclude &
+can’t exclude .
+
+to build the range, we add only letters that are not excluded
+and we a grep range of them
+the non-space, non-alphabetics are never excluded, so we can just append them after the range, correct?
+
+ actualText[theActualTextIndex] = theCharacter;
+        theActualTextIndex++;
+
+we scan for non-zeros
+when we get a non-zero
+turn on space scanning
+
+store m, q, k, s
+we see a zero we set space scannning to true
+if space scanning is set to true and character is zero
+we store a space
+and disable space scanning
+
+we scan for letters or underlines
+
+
+-space__
+if the character is not the defautl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,44 @@
+first 
+first character is not default
+it gets added, space scanning is set to true
+index is 0 on first white
+
+second white
+index is now 1
+character is not default
+character _ is added
+space scanning true
+
+so far we have _,_
+
+now third character is default
+we enter space scanning
+with index = 2
+index is less than length
+index +1 IS default, so we don't add a space
+this is wrong
+we need another loop here to see if any other character in displaytext is not default, then we add a space
+
+
+ HangManWheelOfFortunePossibleMatchesViewModel possibleMatchViewModel =
+        Provider.of<HangManWheelOfFortuneViewModel>(context, listen: true);
+
+        HangManWheelOfFortuneExclusionViewModel exclusionViewModel =
+        Provider.of<HangManWheelOfFortuneExclusionViewModel>(context, listen: true);
+
+        HangManWheelOfFortuneViewCheaterModel cheaterViewModel =
+        Provider.of<HangManWheelOfFortuneViewCheaterModel>(context, listen: true);
+
+          HangManWheelOfFortuneViewCheaterModel? ;
+
+          void registerExclusionViewModel(HangManWheelOfFortuneExclusionViewModel exclusionViewModelParam) {
+    exclusionViewModel = exclusionViewModelParam;
+  }
+
+  void registerCheaterViewModel(HangManWheelOfFortuneViewCheaterModel cheaterViewModelParam) {
+    cheaterViewModel = cheaterViewModelParam;
+  }
+
+  void registerCheaterPossibleMatchViewModel(HangManWheelOfFortunePossibleMatchesViewModel possibleMatchViewModelParam) {
+    possibleMatchViewModel = possibleMatchViewModelParam;
+  }
